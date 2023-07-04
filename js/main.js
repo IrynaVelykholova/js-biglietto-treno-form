@@ -12,13 +12,14 @@ btnGenera.addEventListener("click", function () {
     const username = userNameInput.value;
     const kilometres = kmInput.value;
     const age = ageInput.value;
-    const costo = parseInt(kmInput.value) * 0.21;
-})
-
-if (age < 18) {
+    const costo = parseInt(kilometres) * 0.21;
+    if (age < 18) {
         document.getElementById("prezzo").innerHTML = (costo - (costo * 20) / 100 ).toFixed(2);
     } else if (age >= 65) {
         document.getElementById("prezzo").innerHTML = (costo - (costo * 20) / 100 ).toFixed(2);
     } else {
         document.getElementById("prezzo").innerHTML = costo.toFixed(2);
     }
+    document.getElementById("name").innerHTML = username;
+})
+
